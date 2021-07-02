@@ -1,9 +1,7 @@
 """
 This is a reinforcement learning based approach to the problem.
 
-Author: Junior McGrath
-
-As a part of BSC Computer Science at the University of Westminster
+As a part of BSC Computer Science
 """
 
 #import of classes required for functionality
