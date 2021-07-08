@@ -8,7 +8,7 @@ As a part of BSC Computer Science
 from AI_Player import AI_Player
 from AI_CONTROL import AI_CONTROL
 from Board import Board
-from Knowledge_New import Knowledge_New
+from Knowledge import Knowledge
 
 #honestly my favorite module, allows time functions like sleep() and counting time 
 import time
@@ -44,7 +44,7 @@ def main():
 
     #we initialise the main objects that will be used in this code block
     board = Board()
-    knowledge = Knowledge_New()
+    knowledge = Knowledge()
     AI_Player = AI_Player(knowledge)
     AI_control = AI_CONTROL()
 

@@ -1,4 +1,4 @@
-class Knowledge_New(object):
+class Knowledge(object):
     """description of class"""
     #this is a dictionary based knowledge system where the board state points to a dictionary which has weighted values for the next move.
 

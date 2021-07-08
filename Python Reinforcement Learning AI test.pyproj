@@ -29,7 +29,7 @@
     <Compile Include="Board.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Knowledge_New.py">
+    <Compile Include="Knowledge.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Python_Reinforcement_Learning_AI_test.py" />
