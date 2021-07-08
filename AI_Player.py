@@ -1,6 +1,6 @@
 import random
 
-class AI_TEST(object):
+class AI_Player(object):
     """
     This is an experimental class that runs on a weighted algorithmn.
     """
@@ -9,21 +9,21 @@ class AI_TEST(object):
 
     def makeMove(self, Board):
         #gain a list of all possible moves to be made by iterating through the board
-        possibleMoves = []
-        counter = 0
+        possibleMovesArray = []
+        roundsCounter = 0
         boardState = Board.getState()
         print ("AI_TEST is making a move")
         for i in Board.board:
             for x in i:
                 if not (x):
-                    possibleMoves.append(counter)
-                    counter += 1
+                    possibleMovesArray.append(roundsCounter)
+                    roundsCounter += 1
                 else:
-                    counter += 1 
+                    roundsCounter += 1 
         try:
             tempDict = self.knowledge.addToThisDict[boardState]
             newDict = {}
-            for x in possibleMoves:
+            for x in possibleMovesArray:
                 newDict[str(x)] = 100
             for key, value in tempDict.items():
                 newDict[key] = value
@@ -35,29 +35,29 @@ class AI_TEST(object):
             for x in list(newDict.values()):
                 weightedSelection -= x
                 if (weightedSelection <= 0):
-                    self.addKnowledge(boardState, possibleMoves[count])
-                    return possibleMoves[count]
+                    self.addKnowledge(boardState, possibleMovesArray[count])
+                    return possibleMovesArray[count]
                 else:
                     count += 1
 
         except:
-            myRandom = random.choice(possibleMoves)
+            myRandom = random.choice(possibleMovesArray)
             madeMove = str(myRandom)
             self.addKnowledge(boardState, madeMove)
             return myRandom
 
     def makeMoveRandom(self, Board):
-        possibleMoves = []
-        counter = 0
+        possibleMovesArray = []
+        roundsCounter = 0
         print ("AI_TEST is making a move")
-        for i in Board.board:
-            for x in i:
+        for row in Board.board:
+            for x in row:
                 if not (x):
-                    possibleMoves.append(counter)
-                    counter += 1
+                    possibleMovesArray.append(roundsCounter)
+                    roundsCounter += 1
                 else:
-                    counter += 1
-        myRandom = random.choice(possibleMoves)
+                    roundsCounter += 1
+        myRandom = random.choice(possibleMovesArray)
         madeMove = str(myRandom)
         self.addKnowledge(boardState, madeMove)
         return myRandom

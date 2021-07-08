@@ -23,16 +23,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AI_CONTROL.py" />
-    <Compile Include="AI_TEST.py">
+    <Compile Include="AI_Player.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Board.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Knowledge_New.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Knowledge.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Python_Reinforcement_Learning_AI_test.py" />

@@ -3,15 +3,6 @@ class Knowledge_New(object):
     #this is a dictionary based knowledge system where the board state points to a dictionary which has weighted values for the next move.
 
     def __init__(self):
-        #example of how the nested dictionary system works.
-        exampleLayeredDict = {"Dict1":{"text from dict1":100,
-                                       "dict1key2":100
-                                       },
-                              "Dict2":{"text from dict2":100}
-            }
-        exampleLayeredDict["Dict1"]["newKey"] = "new value"
-        #print(exampleLayeredDict["Dict1"])
-        
         self.addToThisDict = {
             }
 
