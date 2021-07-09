@@ -8,19 +8,24 @@ class Board(object):
     boardWidth = 0
     for i in board[0]:
         boardWidth += 1
+    #get the width of the board from the array hardcoded above
+    #in hindsight, a method that creates the board from a set of inputs would've been better, as this method does not account for a board that is not square.
 
     def getState(self):
-        string = ""
+        state = ""
         for row in self.board:
             for item in row:
                 if item:
-                    string += item
+                    state += item
                 else:
-                    string += "0"
-        return string
+                    state += "0"
+        return state
         #return the state of the board as a string of 9 characters, x, o or 0
 
     def put(self, character, position):
+
+        #this method puts the character passed as an argument onto the board at the position passed as an argument
+        #because position is passed as an int, referencing each possible cell from 0-8, we can find the remainder from division by the width to know the coordinates of the position.
 
         x = position//self.boardWidth
         y = position%self.boardWidth
